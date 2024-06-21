@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Reparto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Aplicación de Reparto</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="form-section">
+                <h2>Agregar Ubicación</h2>
+                <form id="addLocationForm">
+                    <label for="locationName">Nombre de la ubicación:</label>
+                    <input type="text" id="locationName" name="locationName" required>
+                    <button type="submit">Agregar Ubicación</button>
+                </form>
+            </section>
+
+            <section class="form-section">
+                <h2>Agregar Conexión</h2>
+                <form id="addConnectionForm">
+                    <label for="startLocation">Ubicación de inicio:</label>
+                    <input type="text" id="startLocation" name="startLocation" required>
+                    <label for="endLocation">Ubicación de fin:</label>
+                    <input type="text" id="endLocation" name="endLocation" required>
+                    <label for="weight">Peso:</label>
+                    <input type="number" id="weight" name="weight" required>
+                    <button type="submit">Agregar Conexión</button>
+                </form>
+            </section>
+
+            <section class="button-section">
+                <button id="dfsBtn">Recorrido en Profundidad (DFS)</button>
+                <button id="totalWeightBtn">Obtener Suma de Pesos</button>
+            </section>
+
+            <section class="form-section">
+                <h2>Ruta Más Corta</h2>
+                <form id="shortestPathForm">
+                    <label for="shortestPathStart">Ubicación de inicio:</label>
+                    <input type="text" id="shortestPathStart" name="shortestPathStart" required>
+                    <button type="submit">Obtener Rutas Más Cortas</button>
+                </form>
+            </section>
+
+            <section id="resultContainer"></section>
+        </div>
+    </main>
+
+    <script type="module" src="./src/controllers/Script.mjs"></script>
+</body>
+</html>
+
+
